@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <script
+      src="https://kit.fontawesome.com/37007fa821.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Frontend Mentor | Interactive rating component<</title>
+  </head>
+  <body>
+    <main id="container">
+      <div class="mainPage">
+        <!-- star section -->
+        <div class="circle starcontainer">
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <!-- end of star section -->
+
+        <div class="rating-container">
+          <h3>How did we do?</h3>
+          <p>
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+
+          <div class="numbers">
+            <div class="circle ratingnumb">1</div>
+            <div class="circle ratingnumb">2</div>
+            <div class="circle ratingnumb">3</div>
+            <div class="circle ratingnumb">4</div>
+            <div class="circle ratingnumb">5</div>
+          </div>
+
+          <div class="button">
+            <button>SUBMIT</button>
+          </div>
+        </div>
+        <p class="warningMessage"></p>
+      </div>
+
+      <!-- review message container -->
+      <div class="reviewMessage hidden">
+        <div class="image">
+          <img src="./images/illustration-thank-you.svg" alt="thank you png" />
+        </div>
+        <div class="ratingMessage">You selected 4 out of 5</div>
+        <div class="rating-review-messsage">
+          <h3>Thank you!</h3>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Abdullah Ayoola</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

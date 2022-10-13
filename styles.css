@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: hsl(216, 12%, 8%);
+  font-family: "overpass";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  height: 400px;
+  width: 400px;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  background-color: hsl(216, 12%, 54%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.starcontainer {
+  margin: 20px 0px;
+  color: hsl(25, 97%, 53%);
+}
+
+.rating-container h3 {
+  color: #f3f3f3;
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.rating-container p {
+  color: hsl(217, 12%, 63%);
+  line-height: 25px;
+}
+
+div.numbers {
+  display: flex;
+  margin: 20px 0px;
+  justify-content: space-between;
+}
+
+div.ratingnumb:hover {
+  background-color: hsl(25, 97%, 53%);
+}
+
+div.button {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  color: #f3f3f3;
+  font-weight: bold;
+  background-color: hsl(25, 97%, 53%);
+  padding: 12px 120px;
+  border: none;
+  border-radius: 50px;
+  margin-top: 10px;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f3f3f3;
+  color: hsl(25, 97%, 53%);
+}
+
+div.attribution {
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+}
+
+div.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 500px) and (orientation: portrait) {
+  #container {
+    width: 300px;
+    height: 430px;
+  }
+
+  button {
+    padding: 12px 100px;
+  }
+
+  div.attribution {
+    text-align: center;
+    font-size: 11px;
+  }
+}
+
+.reviewMessage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ratingMessage {
+  height: 30px;
+  width: 200px;
+  background-color: hsl(216, 12%, 54%);
+  border-radius: 50px;
+  color: hsl(25, 97%, 53%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+div.image {
+  margin: 20px 0px;
+}
+
+div.rating-review-messsage h3 {
+  color: #f3f3f3;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+div.rating-review-messsage p {
+  color: hsl(217, 12%, 63%);
+}
+
+.rating--active {
+  background-color: white;
+}
+
+.warningMessage {
+  font-size: 12px;
+  color: red;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
