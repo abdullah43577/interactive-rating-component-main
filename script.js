@@ -7,23 +7,28 @@ const mainPage = document.querySelector(".mainPage");
 const reviewMessage = document.querySelector(".reviewMessage");
 const warningMessage = document.querySelector(".warningMessage");
 
-// console.log(btn.textContent);
-// console.log(ratings);
 let rated = "";
-for (let i = 0; i < ratings.length; i++) {
-  ratings[i].addEventListener("click", () => {
-    rated = ratings[i].textContent;
-    //console.log(rated);
-    ratingMessage.textContent = `You selected ${rated} out of ${ratings.length}`;
 
-    //ratings[i].style.backgroundColor = "white";
-    ratings[i].classList.toggle("rating--active");
+ratings.forEach((rating) => {
+  rating.addEventListener("click", () => {
+    // check for active rating
+    (() => {
+      ratings.forEach((rating) => {
+        if (rating.classList.contains("rating--active"))
+          rating.classList.remove("rating--active");
+      });
+    })();
+
+    rating.classList.add("rating--active");
+
+    rated = rating.textContent;
+    ratingMessage.textContent = `You selected ${rated} out of ${ratings.length}`;
   });
-}
+});
 
 btn.addEventListener("click", () => {
-  for (let i = 0; i < ratings.length; i++) {
-    if (ratings[i].classList.contains("rating--active")) {
+  ratings.forEach((rating) => {
+    if (rating.classList.contains("rating--active")) {
       mainPage.classList.add("hidden");
       reviewMessage.classList.remove("hidden");
     } else {
@@ -33,5 +38,5 @@ btn.addEventListener("click", () => {
         warningMessage.textContent = "";
       }, 3000);
     }
-  }
+  });
 });
